@@ -1,0 +1,34 @@
+<p>
+  garagem-detalhe works!
+</p>
+
+<article>
+    <h3>Event binding</h3>
+    <div>
+      <button (click)="botaoClick()"
+      class="btn btn-primary">buton
+    </button>
+
+    <br> <br>
+
+    <input type="text"
+    (keyup)="onKeyUp($event)"
+    (keyup.enter)="salvarValor(campoInput.value)"
+    (blur)="salvarValor(campoInput.value)"
+    #campoInput />
+
+    <p>Valor atual: {{ valorAtual }}</p>
+    <p>Valor salvo: {{ valorsalvo }}</p>
+
+    <br>
+    <span
+      (mouseover)="onMouseOverOut()"
+      (mouseout)="onMouseOverOut()" 
+      [class.highlight]="isMouseOver" >
+      passe o mouse
+    </span>
+
+
+    </div>
+  </article>
+
