@@ -12,6 +12,7 @@ export class GaragemDetalheComponent implements OnInit {
 
   isMouseOver: boolean = false;
 
+
   botaoClick(){
     alert('Botão clicado!');
   }

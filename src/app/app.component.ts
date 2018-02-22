@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'APPCAR';
+  nome: string = 'abc';
+
+  pessoa: any ={
+    nome: 'def',
+    idade: 20
+  } 
 }

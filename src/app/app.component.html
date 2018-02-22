@@ -5,7 +5,31 @@
   </h1>
 </div>
 
-<select #classe (change)="0">
+<section class="two-way">
+  <article>
+    <h3>Two-Way</h3>
+    <div>
+      
+      <input type="text"
+      [value]="nome"
+      (input)="nome = $event.target.value"
+      />
+
+      <input type="text" [(ngModel)]="nome">
+
+
+      <p>Voce digitou: {{ nome }}</p>
+    </div>
+
+    <p>Nome: {{ pessoa.nome }} e idade: {{ pessoa.idade }}</p>
+
+    <input type="text" [(ngModel)]="pessoa.nome"/>
+    <input type="text" [(ngModel)]="pessoa.idade"/>
+
+  </article>
+</section>
+
+<!-- <select #classe (change)="0">
   <option value="alert-success">Sucesso</option>
   <option value="alert-info">Info</option>
   <option value="alert-warning">Alerta</option>
@@ -42,5 +66,5 @@ Info
 
 <alert type="success">hello</alert>
 
-<app-garagem></app-garagem>
+<app-garagem></app-garagem> -->
 
